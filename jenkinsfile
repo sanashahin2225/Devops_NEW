@@ -1,20 +1,16 @@
 pipeline {
-agent any
-stages {
-stage('Build') {
-steps {
-build "jenkins-build"
-}
-}
-stage('Test') {
-steps {
-build "webapp-test"
-}
-}
-stage('Deploy') {
-steps {
-build "webapp-deploy"
-}
-}
-}
-}
+    agent any
+          stages {
+              stage('Build') {
+                          steps {
+                                build "MySecondProject"
+                                }
+                 }
+
+          stage('Deploy') {
+                      steps {
+                              build "MyThirdProject"
+                             }
+                    }
+            }
+      }
