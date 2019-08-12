@@ -1,11 +1,20 @@
 pipeline {
-  agent any 
-  stages{
-  stage('Build') {
-       build 'MySecondProject'
-    }
-  stage('Deploy') {
-       build 'MyThirdProject'
-    }
-   }
-   }
+agent any
+stages {
+stage('Build') {
+steps {
+build "jenkins-build"
+}
+}
+stage('Test') {
+steps {
+build "webapp-test"
+}
+}
+stage('Deploy') {
+steps {
+build "webapp-deploy"
+}
+}
+}
+}
