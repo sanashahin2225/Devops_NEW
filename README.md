@@ -12,4 +12,4 @@ Deploy ```target/WebApp.war``` on Tomcat
  
 #TODO
  
-Add instruction to deploy to ElasticBeanstalk "HELLO"34.227.69.189
+Add instruction to deploy to ElasticBeanstalk 34.227.69.189
